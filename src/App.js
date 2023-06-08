@@ -11,12 +11,13 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" exact={true} element={<Home />} />
+        {/* <Route path="/Out-of-Zone"  */}
         <Route path="/Services" element={<Services />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
-        <Route path="*" exact={true} element={<Error />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </>
