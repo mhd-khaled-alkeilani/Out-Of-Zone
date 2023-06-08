@@ -10,14 +10,15 @@ function App() {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" exact={true} element={<Home />} />
-        {/* <Route path="/Out-of-Zone"  */}
+      <Routes basename={"/"}>
+        <Route path="/" element={<Home />} />
+        <Route path="/Out-Of-Zone" element={<Home />} />
+
         <Route path="/Services" element={<Services />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/AboutUs" element={<AboutUs />} />
         {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
-        <Route path="*" element={<Error />} />
+        <Route path="*" exact element={<Error />} />
       </Routes>
       <Footer />
     </>
